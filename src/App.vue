@@ -14,8 +14,9 @@ export default {
     }
   },
   created() {
-    // localStorage.setItem("url", 'http://127.0.0.1:8989/')
-    localStorage.setItem("url", 'http://47.96.70.129:8989/')
+    // localStorage.setItem("url", 'http://127.0.0.1:8070/')
+    // localStorage.setItem("url", 'http://47.96.70.129:8070/')
+    localStorage.setItem("url", 'http://47.115.54.95:8070/')
   }
 }
 </script>

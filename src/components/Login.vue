@@ -48,7 +48,7 @@ export default {
         if (valid) {
           axios({
             method:'POST',
-            url: localStorage.getItem("url") + 'user/adminLogin',
+            url: localStorage.getItem("url") + 'login/adminLogin',
             data: that.user
           }).then(function(res){
             if (res.data.code === 0) {
@@ -56,7 +56,7 @@ export default {
                 message : '登录成功',
                 type: 'success'
               });
-              localStorage.setItem("user", JSON.stringify(res.data.user));
+              localStorage.setItem("user", JSON.stringify(res.data.list));
               that.$router.push({path: '/home'})
             } else {
               that.$message.error(res.data.msg);

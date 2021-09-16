@@ -3,39 +3,34 @@
     <el-aside width="200px">
       <el-row class="tac">
         <el-col :span="24">
-            <h5 style="text-align: center">便捷车场</h5>
+            <h5 style="text-align: center; color: #fff">便捷车场</h5>
           <el-menu
-              class="el-menu-vertical-demo">
+              class="el-menu-vertical-demo"
+              background-color="#545c64"
+              text-color="#fff"
+              active-text-color="#ffd04b">
             <el-menu-item index="1" @click="menuClick('user', '用户管理')">
               <i class="el-icon-user-solid"></i>
               <span>用户管理</span>
             </el-menu-item>
-            <el-menu-item index="2" @click="menuClick('water', '水表管理')">
-              <i class="el-icon-stopwatch"></i>
+            <el-menu-item index="2" @click="menuClick('park', '停车场管理')">
+              <i class="el-icon-place"></i>
               <span slot="title">停车场管理</span>
             </el-menu-item>
-<!--            <el-menu-item index="3" @click="menuClick('lighting', '电表管理')">-->
-<!--              <i class="el-icon-s-opportunity"></i>-->
-<!--              <span slot="title">电表管理</span>-->
-<!--            </el-menu-item>-->
-<!--            <el-menu-item index="4" @click="menuClick('gas', '气表管理')">-->
-<!--              <i class="el-icon-message-solid"></i>-->
-<!--              <span slot="title">气表管理</span>-->
-<!--            </el-menu-item>-->
           </el-menu>
         </el-col>
       </el-row>
     </el-aside>
     <el-container>
       <el-header>
-        <div  class="div-left">
+        <div  class="div-left" style="color: #fff">
           {{titleName}}
         </div>
-        <div  class="div-right">
-          欢迎您：
+        <div class="div-right">
+          <span style="color: #fff">欢迎您：</span>
           <el-dropdown trigger="click" @command="handleCommand">
             <span class="el-dropdown-link">
-              {{user.username}}<i class="el-icon-arrow-down el-icon-caret-bottom"></i>
+              {{user.name}}<i class="el-icon-arrow-down el-icon-caret-bottom"></i>
             </span>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item icon="el-icon-switch-button" command="out">退出登录</el-dropdown-item>
